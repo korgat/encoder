@@ -1,0 +1,48 @@
+@import '../../style/variables';
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $background-main;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  padding: 10px;
+}
+
+.title-main {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  main {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px 0;
+  }
+
+  .window {
+    &__main {
+      padding: 12px;
+    }
+  }
+}

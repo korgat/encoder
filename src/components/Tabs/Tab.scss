@@ -1,0 +1,18 @@
+.window {
+  &__tabs {
+    &-tab {
+      background-color: #fff;
+      padding: 16px 32px 6px;
+      border-radius: 12px 12px 0px 0px;
+      opacity: 0.7;
+      font-weight: 600;
+      transition: all 0.1s ease-in;
+
+      &.active {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+      }
+    }
+  }
+}

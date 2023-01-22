@@ -1,0 +1,21 @@
+@import '../../style/variables';
+
+.btn-main {
+  display: block;
+  border-radius: 12px;
+  background-color: $main;
+  padding: 16px 32px;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.1s ease-in;
+
+  &:hover {
+    background-color: #144fc3;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-main {
+    padding: 15px;
+  }
+}
