@@ -12,11 +12,11 @@
 
   &__configurations {
     display: flex;
-    gap: 24px;
-    margin-bottom: 8px;
+    margin: 0 -12px 8px;
 
     &-shift,
     &-repeats {
+      margin: 0 12px;
       input {
         width: 100%;
       }

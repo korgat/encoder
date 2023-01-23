@@ -5,6 +5,7 @@ import encoder from '../../../helpers/encoderHelpers';
 import useInput from '../../../hook/useInput';
 
 import './EncoderForm.scss';
+import { useEffect } from 'react';
 
 type TProps = {
   tabIndex: number;
@@ -47,6 +48,11 @@ const EncoderForm: React.FC<TProps> = ({ tabIndex, setResult }) => {
     }
   };
 
+  useEffect(() => {
+    textChangeHandler('');
+    setResult('');
+  }, [tabIndex]);
+
   return (
     <form onSubmit={submitHandler} className="window__main-encoder">
       <TextArea
@@ -56,7 +62,7 @@ const EncoderForm: React.FC<TProps> = ({ tabIndex, setResult }) => {
         className="main-encoder__text"
         maxLength={256}
         hasError={textHasError}
-        errorMsg="Please enter less then 256 characters(A-Z and _)"
+        errorMsg="Please enter A-Z or _ symbol"
         placeholder="Text"
       />
       <div className="main-encoder__configurations">
@@ -68,7 +74,7 @@ const EncoderForm: React.FC<TProps> = ({ tabIndex, setResult }) => {
           min="0"
           max="9"
           hasError={shiftHasError}
-          errorMsg="Enter number (0 to 9)"
+          errorMsg="Number (0 to 9)"
           type="number"
           placeholder="Shift"
         />
@@ -80,7 +86,7 @@ const EncoderForm: React.FC<TProps> = ({ tabIndex, setResult }) => {
           min="0"
           max="5"
           hasError={repeatHasError}
-          errorMsg="Enter number (0 to 5)"
+          errorMsg="Number (0 to 5)"
           type="number"
           placeholder="Number of repeats"
         />

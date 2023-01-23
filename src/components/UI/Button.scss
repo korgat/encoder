@@ -2,9 +2,10 @@
 
 .btn-main {
   display: block;
+  border: 1px solid transparent;
   border-radius: 12px;
   background-color: $main;
-  padding: 16px 32px;
+  padding: 15px 31px;
   color: #fff;
   font-weight: 600;
   transition: background-color 0.1s ease-in;

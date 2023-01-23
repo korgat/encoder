@@ -4,8 +4,7 @@
   &__main {
     display: flex;
     background-color: #fff;
-    padding: 42px 32px 22px;
-    gap: 32px;
+    padding: 32px;
     border-radius: 0px 12px 12px 12px;
     filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07))
       drop-shadow(0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198))
@@ -19,7 +18,7 @@
   &__main-result {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     height: 552px;
     word-break: break-all;
   }
@@ -34,6 +33,7 @@
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     transition: all 0.1s ease-in;
+    margin-left: 32px;
 
     &.decoding {
       background-color: $background-second;
@@ -44,13 +44,17 @@
 @media (max-width: 768px) {
   .window {
     &__main {
-      flex-wrap: wrap;
+      display: block;
       padding: 20px;
     }
 
     &__main-encoder,
     &__main-result {
       height: 352px;
+      width: 100%;
+    }
+    &__main-result {
+      margin: 0;
     }
   }
 }

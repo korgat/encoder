@@ -13,8 +13,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100vh;
 }
 
 .container {
@@ -26,13 +26,6 @@ main {
 .title-main {
   font-weight: 600;
   font-size: 24px;
-}
-
-@media (max-width: 768px) {
-  main {
-    width: auto;
-    height: auto;
-  }
 }
 
 @media (max-width: 480px) {

@@ -6,7 +6,7 @@ type TButton = {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const Button: React.FC<TButton> = ({ children, className, onClick }) => {
+const Button: React.FC<TButton> = ({ children, className = '', onClick }) => {
   const baseClass = 'btn-main ' + className;
   return (
     <button onClick={onClick} className={baseClass}>

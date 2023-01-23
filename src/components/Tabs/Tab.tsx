@@ -7,7 +7,7 @@ type TProps = {
   setTabIndex: () => void;
 };
 
-const Tab: React.FC<TProps> = ({ text, active = false, className, setTabIndex }) => {
+const Tab: React.FC<TProps> = ({ text, active = false, className = '', setTabIndex }) => {
   const baseClass = active ? 'window__tabs-tab active ' : 'window__tabs-tab ';
 
   const tabClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {

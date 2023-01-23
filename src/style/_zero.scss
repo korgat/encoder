@@ -44,7 +44,11 @@ ol {
   list-style: none;
 }
 
+input,
+textarea,
 button {
   background-color: transparent;
   border: none;
+  font-size: inherit;
+  line-height: inherit;
 }
